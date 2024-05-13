@@ -9,7 +9,9 @@ void setup() {
 	while (1) {}
   }
 }
+
   
+
 void loop() {
     Serial.print("Temperature = ");
     Serial.print(bmp.readTemperature());
