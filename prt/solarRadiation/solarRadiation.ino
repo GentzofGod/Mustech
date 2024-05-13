@@ -16,17 +16,25 @@ float radiation = convertToRadiation(voltage);
 String mystring;
 mystring = String(voltage);
 
-Serial.print("Voltage " + mystring + " V    ");
+Serial.print("Voltage  " + mystring + " V    ");
 
 String mystring2 = String(radiation);
-Serial.println("Solar Radiation : " + mystring2 + " KiloWatts/meter-square");
+Serial.println("Solar Radiation :  " + mystring2 + "  KiloWatts/meter-square");
 delay(2000);
 }
 
 float convertToRadiation(float voltage){
+
   float highVolt = voltage;
+
   float power = (highVolt * 0.160)/1000;
+
   float area = 0.06 * 0.03;
+
   float solarRadiation = power/area ;
+
   return solarRadiation;
+
+
+
 }
